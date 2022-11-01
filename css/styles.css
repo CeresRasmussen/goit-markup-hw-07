@@ -190,9 +190,7 @@ ul {
   background-color: var(--accent-text-color);
 
   transform: scale(0);
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: var(--main-animation-cubic);
+  transition: transform 250ms var(--main-animation-cubic);
 }
 
 .navigation__link:hover::before,
