@@ -34,27 +34,29 @@
   &__link:focus {
     color: $accent-text-color;
   }
-
-  .location {
-    color: $main-background-color;
-    font-style: normal;
-    letter-spacing: 0.03em;
-  }
 }
 
-.footer-social__text {
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
+.location {
   color: $main-background-color;
+  font-style: normal;
+  letter-spacing: 0.03em;
 }
 
-.social {
-  display: flex;
-  gap: 10px;
+.footer-social {
+  &__text {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: $main-background-color;
+  }
+
+  &__list {
+    display: flex;
+    gap: 10px;
+  }
 
   &__item {
     @extend %social;
@@ -82,6 +84,7 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: $main-background-color;
+    cursor: pointer;
   }
 
   &__item {
@@ -102,6 +105,14 @@
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     outline: none;
+
+    transition: border 250ms $main-animation-cubic;
+  }
+
+  &__input:hover,
+  &__input:focus {
+    border-color: $accent-text-color;
+    fill: $accent-text-color;
   }
 
   &__button {

@@ -78,6 +78,7 @@ body.modal-open {
   }
 
   &__input-form {
+    display: block;
     position: relative;
     margin-top: 4px;
   }
@@ -153,6 +154,7 @@ body.modal-open {
     left: 15px;
     transform: translateY(-50%);
     fill: $title-text-color;
+    pointer-events: none;
 
     transition: fill 250ms $main-animation-cubic;
   }
@@ -161,6 +163,7 @@ body.modal-open {
     position: relative;
     padding-left: 23px;
     cursor: pointer;
+    user-select: none;
   }
 
   &__checkbox-container {
